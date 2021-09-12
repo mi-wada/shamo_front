@@ -23,7 +23,7 @@ export default function AddPayment({ roomId, users }) {
     e.preventDefault();
     fetch(process.env.NEXT_PUBLIC_SHAMO_API_URL + 'rooms/' + roomId + '/payments', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
       body: JSON.stringify({
         price: Number(e.target.price.value),
         user_id: Number(e.target.who.value),
