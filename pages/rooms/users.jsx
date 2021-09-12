@@ -4,7 +4,7 @@ import User from '../../components/rooms/user';
 
 class Users extends React.Component {
   render() {
-    const users = this.props.users;
+    const users = this.props.users || [];
     const payments = this.props.payments;
 
     return (

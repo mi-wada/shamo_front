@@ -35,7 +35,7 @@ export default function PaymentHistory({ roomId, users, payments }) {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
   let user_name_map = {};
-  users.forEach(user => user_name_map[user.ID] = user.Name);
+  (users || []).forEach(user => user_name_map[user.ID] = user.Name);
 
   return (
     <>
@@ -59,7 +59,7 @@ export default function PaymentHistory({ roomId, users, payments }) {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {payments.map(payment => (
+                    {(payments || []).map(payment => (
                       <tr>
                         <td className="pl-5 py-4 break-all text-right text-sm text-gray-500">
                           {payment.price.toLocaleString()}
