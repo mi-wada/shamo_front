@@ -2,7 +2,11 @@ const securityHeaders = [
   {
     key: 'Referrer-Policy',
     value: 'unsafe-url',
-  }
+  },
+  {
+    key: 'Access-Control-Allow-Origin',
+    value: '*',
+  },
 ]
 
 module.exports = {
