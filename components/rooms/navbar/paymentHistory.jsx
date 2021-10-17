@@ -10,7 +10,7 @@ const modalStyle = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    width: '450px',
+    width: '90%',
     height: '500px',
     border: 'none',
     marginRight: '-50%',
@@ -20,7 +20,7 @@ const modalStyle = {
 
 export default function PaymentHistory({ roomId, users, payments }) {
   const deletePayment = (payment_id) => {
-    fetch(process.env.NEXT_PUBLIC_SHAMO_API_URL + 'rooms/' + roomId  + '/payments', {
+    fetch(process.env.NEXT_PUBLIC_SHAMO_API_URL + 'rooms/' + roomId + '/payments', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -45,10 +45,15 @@ export default function PaymentHistory({ roomId, users, payments }) {
         </svg>
       </div>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} style={modalStyle}>
+        <div onClick={() => setModalIsOpen(false)}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-500 hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
         <div className="flex flex-col">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-              <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+              <div className="overflow-hidden border-b border-gray-200 sm:rounded-lg">
                 <table className="table-fixed">
                   <thead className="bg-gray-400">
                     <tr>
