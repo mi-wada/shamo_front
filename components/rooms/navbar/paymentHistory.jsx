@@ -53,17 +53,17 @@ export default function PaymentHistory({ roomId, users, payments }) {
         </svg>
       </div>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} style={modalStyle}>
-        <div onClick={() => setModalIsOpen(false)} className="bg-gray-600">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-100 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div onClick={() => setModalIsOpen(false)} className="bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-8 w-8 text-gray-100 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </div>
         <div className="flex flex-col">
           <div className="-my-2 overflow-x-auto">
             <div className="py-2 align-middle inline-block w-full">
-              <div className="overflow-hidden border-b border-gray-200">
+              <div className="overflow-hidden">
                 <table className="table-fixed">
-                  <thead className="bg-gray-500">
+                  <thead className="bg-gray-700">
                     <tr>
                       <th className="w-4/12 py-3 text-right text-xs font-bold text-white uppercase tracking-wider">Price</th>
                       <th className="w-4/12 py-3 text-right text-xs font-bold text-white uppercase tracking-wider">Who</th>
