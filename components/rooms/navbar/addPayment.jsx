@@ -5,6 +5,12 @@ import Router from "next/router"
 Modal.setAppElement('#__next')
 
 const modalStyle = {
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    backgroundColor: 'gray'
+  },
   content: {
     top: '50%',
     left: '50%',
@@ -12,7 +18,9 @@ const modalStyle = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    borderRadius: '1rem'
+    borderRadius: '1rem',
+    padding: '0',
+    border: 'none',
   },
 };
 
@@ -45,6 +53,11 @@ export default function AddPayment({ roomId, users }) {
         </svg>
       </div>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} style={modalStyle}>
+      <div onClick={() => setModalIsOpen(false)} className="bg-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-100 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
         <div className="container mx-auto max-w-md transition duration-300">
           <form onSubmit={submitPayment} className="py-12 p-10 bg-white rounded-xl">
             <div className="mb-6">
