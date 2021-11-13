@@ -4,7 +4,7 @@ class User extends React.Component {
   render() {
     const user = this.props.user;
     const payments = this.props.payments;
-    const totalPrice = (typeof payments !== "undefined") ? payments.filter(payment => payment.user_id === user.ID).reduce((acc, cur) => acc + cur.price, 0) : 0;
+    const totalPrice = (typeof payments !== "undefined") ? payments.filter(payment => payment.user_id === user.Id).reduce((acc, cur) => acc + cur.price, 0) : 0;
     return (
       <div className="w-full md:w-1/2 px-2">
         <div className="rounded-lg shadow-sm mb-4">

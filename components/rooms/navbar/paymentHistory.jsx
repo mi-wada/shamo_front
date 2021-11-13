@@ -43,7 +43,7 @@ export default function PaymentHistory({ roomId, users, payments }) {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
   let user_name_map = {};
-  (users || []).forEach(user => user_name_map[user.ID] = user.Name);
+  (users || []).forEach(user => user_name_map[user.Id] = user.Name);
 
   return (
     <>
