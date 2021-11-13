@@ -32,7 +32,7 @@ export default function PaymentHistory({ roomId, users, payments }) {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        id: Number(payment_id)
+        id: payment_id
       })
     })
       .then(res => res.json().then(data => {
