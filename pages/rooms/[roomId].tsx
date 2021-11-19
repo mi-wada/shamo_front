@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import useSWR from 'swr';
+import Header from "../header";
 
 import Loading from "../loading";
 import Navbar from "./navbar";
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <>
+      <Header />
       <Navbar users={users} payments={payments} roomId={roomId} />
       <Users users={users} payments={payments} />
     </>
