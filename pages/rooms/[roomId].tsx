@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import useSWR from 'swr';
-import Loading from "../loading";
 
+import Loading from "../loading";
 import Navbar from "./navbar";
 import Users from "./users";
 

@@ -35,7 +35,7 @@ export default function AddPayment({ roomId, users }) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         price: Number(e.target.price.value),
-        user_id: Number(e.target.who.value),
+        user_id: e.target.who.value,
         what: e.target.what.value
       })
     })
