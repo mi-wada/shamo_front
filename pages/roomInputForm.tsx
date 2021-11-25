@@ -15,7 +15,7 @@ export default function RoomInputForm() {
       headers: { 'Content-Type': 'application/json' }
     })
     .then(res => res.json().then(data => {
-      router.push("/rooms/" + data.room_id)
+      router.push("/rooms/" + data.id)
     }))
   }
 
